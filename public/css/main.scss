@@ -1,0 +1,115 @@
+$blue: #05387B;
+$d-green: #379683;
+$green: #5CDB85;
+$l-green: #8EE4AF;
+$pale: #EDF5E1;
+
+body {
+    background: $green;
+    color: $pale;
+    min-width: 350px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: $blue;
+    text-align: center;
+}
+
+form {
+    background: $d-green;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+    
+    input {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        height: 90%;
+        font-size: 2em;
+        text-align: center;
+        margin: auto;
+        border-radius: 30px;
+        border: none;
+    }
+
+    input[type="submit"] {
+        width: 100px;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+}
+
+.task {
+    background: $blue;
+    border-radius: 10px;
+    width: 70%;
+    height: 200px;
+    margin: 10px auto;
+    padding: 10px 10px 0px 10px;
+    color: $blue;
+
+    .info {
+        height: 80%;
+        background: $pale;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4em;
+        padding: 0px 10px;
+        overflow: scroll;
+    }
+
+    .controls {
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        span {
+            width: 50%;
+            text-align: center;
+            margin: auto 10px;
+
+            button {
+                font-family: 'Poppins', sans-serif;
+                background: none;
+                border: none;
+                border-radius: 10px;
+                padding: 0px 10px;
+                font-size: 1.1em;
+                width: 100%;
+                height: 100%;
+                color: $pale;
+                transition: 0.3s all ease-in-out;
+                &:hover {
+                    color: $blue;
+                    background: $pale;
+                }
+
+                &:active {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+.task-finished {
+    background: $d-green;
+    opacity: .5;
+    .info {
+        text-decoration: line-through;
+        color: $l-green;
+    }
+}

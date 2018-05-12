@@ -1,0 +1,89 @@
+body {
+  background: #5CDB85;
+  color: #EDF5E1;
+  min-width: 350px;
+  font-family: 'Poppins', sans-serif; }
+
+h1 {
+  color: #05387B;
+  text-align: center; }
+
+form {
+  background: #379683;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 70%;
+  margin: auto; }
+  form input {
+    font-family: 'Poppins', sans-serif; }
+  form input[type="text"] {
+    width: 100%;
+    height: 90%;
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+    border-radius: 30px;
+    border: none; }
+  form input[type="submit"] {
+    width: 100px;
+    margin: 10px auto;
+    border-radius: 10px; }
+
+.task {
+  background: #05387B;
+  border-radius: 10px;
+  width: 70%;
+  height: 200px;
+  margin: 10px auto;
+  padding: 10px 10px 0px 10px;
+  color: #05387B; }
+  .task .info {
+    height: 80%;
+    background: #EDF5E1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    padding: 0px 10px;
+    overflow: scroll; }
+  .task .controls {
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .task .controls span {
+      width: 50%;
+      text-align: center;
+      margin: auto 10px; }
+      .task .controls span button {
+        font-family: 'Poppins', sans-serif;
+        background: none;
+        border: none;
+        border-radius: 10px;
+        padding: 0px 10px;
+        font-size: 1.1em;
+        width: 100%;
+        height: 100%;
+        color: #EDF5E1;
+        transition: 0.3s all ease-in-out; }
+        .task .controls span button:hover {
+          color: #05387B;
+          background: #EDF5E1; }
+        .task .controls span button:active {
+          outline: none; }
+
+.task-finished {
+  background: #379683;
+  opacity: .5; }
+  .task-finished .info {
+    text-decoration: line-through;
+    color: #8EE4AF; }
+
+/*# sourceMappingURL=main.css.map */

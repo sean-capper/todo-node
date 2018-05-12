@@ -1,0 +1,39 @@
+<% include ./partials/header %>
+
+<h1>To Do List</h1>
+
+<% if (errors) { %>
+    <p class="error"><%= errors %></p>
+  <% } %>
+
+
+<div class="container">
+    <form method="POST" action="/add">
+        <input type="text" placeholder="Enter a task..." name="task">
+        <input type="submit" value="Add Task">
+    </form>
+</div>
+
+<% if(locals.tasks) { %>
+    <% tasks.forEach(task => { %>
+        <% if(task.active) { %>
+            <div class='task task-active'> 
+                <div class='info'><%= task.task %></div>
+                <div class='controls'>
+                    <span><button class="toggleTask" data-id=<%=task._id %>>Finished</button></span> 
+                    <span><button class="deleteTask" data-id=<%=task._id %>>Delete</button></span> 
+                </div>
+            </div> 
+        <% } else { %>
+            <div class='task task-finished'> 
+                <div class='info'><%= task.task %></div>
+                <div class='controls'>
+                    <span><button class="toggleTask" data-id=<%=task._id %>>Not Finished?</button></span> 
+                    <span><button class="deleteTask" data-id=<%=task._id %>>Delete</button></span> 
+                </div>
+            </div> 
+        <% } %>
+    <% }) %>
+<% } %>
+
+<% include ./partials/footer %>
