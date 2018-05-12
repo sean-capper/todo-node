@@ -18,10 +18,10 @@ Clone or download the repository.
 git clone https://github.com/sean-capper/todo-node.git
 ```
 
-Navigate to the folder location using terminal/cmd
+Navigate to the folder location using terminal/cmd, for example:
 
 ```
-$ cd projects/accountregister 
+$ cd projects/todo-node 
 ```
 
 Start the Mongo Daemon in terminal/cmd
